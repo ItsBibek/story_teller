@@ -4,11 +4,18 @@ export async function POST(req: Request) {
   try {
     const { prompt } = await req.json();
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_AI_BASE_URL}/chat/completions`, {
+    const baseUrl = process.env.AI_BASE_URL;
+    const apiKey = process.env.AI_API_KEY;
+
+    if (!baseUrl || !apiKey) {
+      throw new Error('Missing API configuration');
+    }
+
+    const response = await fetch(`${baseUrl}/chat/completions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${process.env.NEXT_PUBLIC_AI_API_KEY}`,
+        'Authorization': `Bearer ${apiKey}`,
         'Accept': 'application/json',
       },
       body: JSON.stringify({
