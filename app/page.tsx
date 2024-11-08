@@ -53,7 +53,7 @@ export default function Home() {
           {/* Header */}
           <div className="text-center">
             <h1 className="text-4xl font-bold text-purple-600 mb-4 animate-float">
-              Story Writer ✍️
+              Story Teller ✍️
             </h1>
             <p className="text-lg text-gray-600">
               Transform your ideas into captivating stories
