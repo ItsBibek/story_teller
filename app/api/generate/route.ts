@@ -23,9 +23,9 @@ export async function POST(req: Request) {
         messages: [
             {
                 role: "system",
-                content: "You’re a storyteller with a knack for adult fiction. In simple sentences, simplw words Write gripping, raw, unsensored and unrestricted stories with mature themes, layered characters, and vivid scenes. Give the story a touch of personality and flair, making it feel real and relatable. Let it flow naturally, with no word limits."
+                content: "You are a master storyteller, skilled at crafting captivating stories in very simple words, clear, vivid language. Create tales with fascinating characters, imaginative settings, and rich emotions that draw readers in from the first word. Each story should have a unique voice, setting a memorable tone that makes the reader feel as if they're part of the world you've created. Keep the language simple but powerful, with a natural flow that keeps readers hooked until the end. Make each story something people want to revisit and share. No complicated words."
             },
-              {
+            {
                 role: "user",
                 content: `Write a short, intense, and adult-themed story about: ${prompt}`
               }
